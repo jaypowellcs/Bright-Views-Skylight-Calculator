@@ -1,0 +1,86 @@
+export const DECKMOUNTED = [
+    {
+        id: 0,
+        code: A06, 
+        frame: '15 1/2 x 46 1/2' ,
+        opening: '14 1/2 x 45 3/4',
+    },
+    {
+        id: 1,
+        code: C01, 
+        frame: '21 1/2 x 27 3/8' ,
+        opening: '21 x 26 7/8',
+    },
+    {
+        id: 2,
+        code: C04, 
+        frame: '21 1/2 x 38 3/8' ,
+        opening: '21 x 37 7/8',
+    },
+    {
+        id: 3,
+        code: C06, 
+        frame: '21 1/2 x 46 1/4' ,
+        opening: '21 x 45 3/4',
+    },
+    {
+        id: 4,
+        code: C08, 
+        frame: '21 1/2 x 54 15/16' ,
+        opening: '21 x 54 7/16',
+    },
+    {
+        id: 5,
+        code: C12, 
+        frame: '21 1/2 x 70 3/4' ,
+        opening: '21 x 70 1/4',
+    },
+    {
+        id: 6,
+        code: D26, 
+        frame: '23 1/4 x 23 7/16' ,
+        opening: '22 1/2 x 22 15/16',
+    },
+    {
+        id: 7,
+        code: D06, 
+        frame: '23 1/4 x 23 7/16' ,
+        opening: '22 1/2 x 45 3/4',
+    },
+    {
+        id: 8,
+        code: M02, 
+        frame: '30 9/16 x 30 1/2' ,
+        opening: '30 1/16 x 30',
+    },
+    {
+        id: 9,
+        code: M04, 
+        frame: '30 9/16 x 30 1/2' ,
+        opening: '30 1/16 x 37 7/8',
+    },
+    {
+        id: 10,
+        code: M06, 
+        frame: '30 9/16 x 46 1/4' ,
+        opening: '30 1/16 x 45 3/4',
+    },
+    {
+        id: 11,
+        code: M08, 
+        frame: '30 9/16 x 54 15/16' ,
+        opening: '30 1/16 x 54 7/16',
+    },
+    {
+        id: 12,
+        code: S01, 
+        frame: '44 3/4 x 27 3/8' ,
+        opening: '44 1/4 x 26 7/8',
+    },
+    {
+        id: 13,
+        code: S06, 
+        frame: '44 3/4 x 46 1/4' ,
+        opening: '44 1/4 x 45 3/4',
+    },
+]
