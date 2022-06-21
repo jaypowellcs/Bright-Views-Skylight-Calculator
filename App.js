@@ -1,4 +1,4 @@
-import Main from '../SkylightCalMobile/screens/MainComponent';
+import Main from '../SkylightCalMobile/screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
