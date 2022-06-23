@@ -1,8 +1,7 @@
 import { ScrollView, View } from 'react-native';
 import { Text, Card, Image, Button, Icon, Header } from 'react-native-elements';
 import skylight from '../assets/images/mainskylight.jpg';
-
-
+import { useNavigation } from '@react-navigation/native';
 
 
 const MainCard = () => {
@@ -13,26 +12,28 @@ const MainCard = () => {
                 width: 350, 
                 height: 350}}>
                 <Card>
-                <Card.Image
-                    style={{ padding: 0 }}
-                    source={skylight}
-                />
-                <Card.Title
-                style={{ marginTop: 10 }}
-                >
-                Skylight Calculator 
-                </Card.Title> 
+                  <Card.Image
+                      style={{ padding: 0 }}
+                      source={skylight}
+                  />
+                  <Card.Title
+                  style={{ marginTop: 10 }}
+                  >
+                  Skylight Calculator 
+                  </Card.Title> 
                 </Card>
             </View>
-            </ScrollView>
+          </ScrollView>
     );
 };
 
-const IdBtn = () => {
+const IdentifyBtn = ({}) => {
+  const navigation = useNavigation();
     return (
         <ScrollView>
         <View>
               <Button
+               onPress={() => navigation.navigate('Identify')}
                  buttonStyle={{
                     backgroundColor: '#F5272B',
                     borderRadius: 10,
@@ -93,12 +94,12 @@ const WhyBtn = () => {
     );
 };
 
-const Main = () => {
+const HomeScreen = (navigation) => {
     return (
         <>
         <View style={{ alignItems: 'center', justifyContent: 'center' }}>
             <MainCard></MainCard>
-            <IdBtn></IdBtn>
+            <IdentifyBtn></IdentifyBtn>
             <SkylightCalBtn></SkylightCalBtn>
             <WhyBtn></WhyBtn>
         </View >
@@ -106,4 +107,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default HomeScreen; 
