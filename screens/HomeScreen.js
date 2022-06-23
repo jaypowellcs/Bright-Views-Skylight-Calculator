@@ -94,7 +94,7 @@ const WhyBtn = () => {
     );
 };
 
-const HomeScreen = (navigation) => {
+const HomeScreen = () => {
     return (
         <>
         <View style={{ alignItems: 'center', justifyContent: 'center' }}>
