@@ -3,7 +3,6 @@ import { Text, Card, Image, Button, Icon, Header } from 'react-native-elements';
 import skylight from '../assets/images/mainskylight.jpg';
 import { useNavigation } from '@react-navigation/native';
 
-
 const MainCard = () => {
     return (
         <ScrollView>
@@ -34,7 +33,7 @@ const IdentifyBtn = ({}) => {
         <View>
               <Button
                onPress={() => navigation.navigate('Identify')}
-                 buttonStyle={{
+                buttonStyle={{
                     backgroundColor: '#F5272B',
                     borderRadius: 10,
                   }}
@@ -52,10 +51,12 @@ const IdentifyBtn = ({}) => {
 };
 
 const SkylightCalBtn = () => {
+  const navigation = useNavigation();
     return (
         <ScrollView>
         <View>
               <Button
+              onPress={() => navigation.navigate('SkylightCal')}
               buttonStyle={{
                 backgroundColor: '#F5272B',
                 borderRadius: 10,
@@ -73,16 +74,41 @@ const SkylightCalBtn = () => {
     );
 };
 
-const WhyBtn = () => {
+const GlassBtn = () => {
+  const navigation = useNavigation();
     return (
         <ScrollView>
         <View>
               <Button
+              onPress={() => navigation.navigate('Glass')}
                buttonStyle={{
                 backgroundColor: '#F5272B',
                 borderRadius: 10,
               }}
                 title={'Glass vs Plastic'}
+                containerStyle={{
+                  width: 200,
+                  marginHorizontal: 50,
+                  marginVertical: 10,
+                }}
+              />
+        </View>
+        </ScrollView>
+    );
+};
+
+const ContactBtn = () => {
+  const navigation = useNavigation();
+    return (
+        <ScrollView>
+        <View>
+              <Button
+              onPress={() => navigation.navigate('Contact')}
+               buttonStyle={{
+                backgroundColor: '#F5272B',
+                borderRadius: 10,
+              }}
+                title={'Contact Us'}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,
@@ -101,7 +127,8 @@ const HomeScreen = () => {
             <MainCard></MainCard>
             <IdentifyBtn></IdentifyBtn>
             <SkylightCalBtn></SkylightCalBtn>
-            <WhyBtn></WhyBtn>
+            <GlassBtn></GlassBtn>
+            <ContactBtn></ContactBtn>
         </View >
         </>
     );
