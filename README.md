@@ -1,4 +1,4 @@
-# SkylightCalMobile
+# Bright Views Skylight Calculator 
 
 ## Table of Contents
 * [Introduction](#Introduction)
