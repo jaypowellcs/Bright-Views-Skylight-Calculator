@@ -6,21 +6,24 @@ import { useNavigation } from '@react-navigation/native';
 const MainCard = () => {
     return (
         <ScrollView>
-            <View style={{
-                marginTop: 50, 
-                width: 350, 
-                height: 350}}>
-                <Card>
-                  <Card.Image
-                      style={{ padding: 0 }}
-                      source={skylight}
-                  />
-                  <Card.Title
-                  style={{ marginTop: 10 }}
-                  >
-                  Skylight Calculator 
-                  </Card.Title> 
-                </Card>
+            <View 
+            style={{
+            marginTop: 25, 
+            width: 350, 
+            height: 300,
+            }}
+            >
+              <Card>
+                <Card.Title
+                style={{ color: 'black'}}
+                >
+                Skylight Calculator 
+                </Card.Title> 
+                <Card.Image
+                    style={{ padding: 0, }}
+                    source={skylight}
+                />
+              </Card>
             </View>
           </ScrollView>
     );
@@ -120,9 +123,12 @@ const ContactBtn = () => {
     );
 };
 
+
 const HomeScreen = () => {
     return (
         <>
+        <ScrollView
+        style={{backgroundColor: '#e0e0e0'}}>
         <View style={{ alignItems: 'center', justifyContent: 'center' }}>
             <MainCard></MainCard>
             <IdentifyBtn></IdentifyBtn>
@@ -130,6 +136,7 @@ const HomeScreen = () => {
             <GlassBtn></GlassBtn>
             <ContactBtn></ContactBtn>
         </View >
+        </ScrollView>
         </>
     );
 };
