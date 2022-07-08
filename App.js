@@ -38,7 +38,7 @@ export default function App() {
         <Stack.Screen 
         name="Identify" 
         component={IdentifyScreen} 
-        options={{title: 'Identify Skylights'}}
+        options={{title: 'Identify Your Skylights'}}
         />
         <Stack.Screen 
         name="SkylightCal" 

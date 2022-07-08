@@ -40,7 +40,7 @@ const IdentifyBtn = ({}) => {
                     backgroundColor: '#F5272B',
                     borderRadius: 10,
                   }}
-                title={'Identify Skylights'}
+                title={'Identify Your Skylights'}
                 containerStyle={{
                   width: 200,
                   marginHorizontal: 50,

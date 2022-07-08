@@ -1,108 +1,80 @@
-import { ScrollView, View, StyleSheet } from 'react-native';
-import { Text, Card, Image, Button, Icon, Header } from 'react-native-elements';
-import deckmount from '../assets/images/deckmount.jpg';
-import curbmount from '../assets/images/curbmount.jpg';
-import selfflash from '../assets/images/selfflash.webp';
+import { ScrollView, View,  StyleSheet} from 'react-native';
+import { Text, Image, Button} from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 
-const DeckMountCard = () => {
+
+const DeckMountedIdentify = () => {
+    const navigation = useNavigation();
     return (
-       
-                <Card  style={{margin: 10}}>
-                    <Card.Title>Deck Mounted Skylight</Card.Title>
-                    <Card.Divider />
-                    <Card.Image
-                    style={{ padding: 0, height:250, width: 450 }}
-                    source={deckmount}
-                    />
-                    <Text style={{ marginBottom: 10 }}>
-                    Is your Skylight a Deck Mounted Skylight? 
-                    </Text>
-                    <Button
-                    buttonStyle={{
-                        borderRadius: 0,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        marginBottom: 0,
-                        backgroundColor: '#F5272B',
-                    }}
-                    title="Deck Mounted Calculator"
-                    />
-                </Card>
-    
-    );
-};
+        <View>
+            <Text>
+            Deck Mounted Skylight
+            </Text>
+            <Text>
+            Easiest way to tell if your skylight is a deck mounted skylight is by the top flashing. See below for an example.
+            </Text>
+            <Image>
 
-const CurbMountCard = () => {
+            </Image>
+            <Button
+               onPress={() => navigation.navigate('Identify')}
+                buttonStyle={{
+                    backgroundColor: '#F5272B',
+                    borderRadius: 10,
+                  }}
+                title={'Identify Your Skylights'}
+                containerStyle={{
+                  width: 200,
+                  marginHorizontal: 50,
+                  marginVertical: 10,
+                }}
+            />
+        </View>
+    )
+}
+
+const CurbMountedIdentify = () => {
     return (
-        
-                <Card>
-                    <Card.Title>Curb Mounted Skylight</Card.Title>
-                    <Card.Divider />
-                    <Card.Image
-                    style={{ padding: 0, height: 350,}}
-                    source={curbmount}
-                    />
-                    <Text style={{ marginBottom: 10 }}>
-                    Is your Skylight a Curb Mounted Skylight? 
-                    </Text>
-                    <Button
-                    buttonStyle={{
-                        borderRadius: 0,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        marginBottom: 0,
-                        backgroundColor: '#F5272B',
-                    }}
-                    title="Curb Mounted Calculator"
-                    />
-                </Card>
-          
-    );
-};
+        <View>
+            <Text>
+            Curb Mounted Skylight
+            </Text>
+            <Text>
+            Easiest way to tell if it is a curb mounted skylight. See below for an example.
+            </Text>
+            <Image>
+                
+            </Image>
+        </View>
+    )
+}
 
-const SelfFlashCard = () => {
+const SelfFlashIdentify = () => {
     return (
-                <Card>
-                    <Card.Title>Self Flashed Skylight</Card.Title>
-                    <Card.Divider />
-                    <Card.Image
-                    style={{ padding: 0,  margin: 10 }}
-                    source={selfflash}
-                    />
-                    <Text style={{ marginBottom: 10 }}>
-                    Is your Skylight a Self Flashed Skylight? 
-                    </Text>
-                    <Button
-                    backgroundColor='#F5272B'
-                    buttonStyle={{
-                        borderRadius: 0,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        marginBottom: 0,
-                        backgroundColor: '#F5272B',
-                    }}
-                    title="Self Flashed Calculator"
-                    />
-                </Card>
-    );
-};
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-        },
-    }
-);
-
+        <View>
+            <Text>
+            Self Flashed Skylight
+            </Text>
+            <Text>
+            The Skylight has a throat is the easiest way to tell if the skylight. 
+            </Text>
+            <Image>
+                
+            </Image>
+        </View>
+    )
+}
 
 const IdentifyScreen = () => {
    return (
-    <ScrollView>
-        <View style={styles.container}>
-            <DeckMountCard></DeckMountCard>
-            <CurbMountCard></CurbMountCard>
-            <SelfFlashCard></SelfFlashCard>
+    <ScrollView
+    style={{backgroundColor: '#e0e0e0'}}
+    >
+        <View>
+            <DeckMountedIdentify></DeckMountedIdentify>
+            <CurbMountedIdentify></CurbMountedIdentify>
+            <SelfFlashIdentify></SelfFlashIdentify>
         </View>
     </ScrollView>
    );
